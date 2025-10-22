@@ -35,5 +35,5 @@ GROUP BY c.client_id, c.first_name, c.last_name;</pre>
              FROM categories
              GROUP BY parent_id)
 SELECT name,
-       IFNULL(child_cats, 0)
+       IFNULL(child_cats, 0) AS child_cats
 FROM categories c LEFT JOIN tab t ON c.cat_id = t.parent_id;<pre>
